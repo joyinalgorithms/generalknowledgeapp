@@ -1,4 +1,5 @@
 import { Fact, CategoryInfo } from '../types';
+import { EXPANDED_FACTS } from './expandedFacts';
 
 export const CATEGORIES: CategoryInfo[] = [
   {
@@ -998,5 +999,6 @@ export const FACTS: Fact[] = [
     citation: 'Oxford English Dictionary (OED 2nd Edition) & Ammon Shea, "Reading the OED"',
     audioNarrative: 'Did you know? The word with the most meanings in the English language is the word "set". The Oxford English Dictionary lists over four hundred and thirty distinct definitions for this single word.',
     tags: ['Oxford English Dictionary', 'Vocabulary', 'Lexicography', 'Word Records']
-  }
+  },
+  ...EXPANDED_FACTS
 ];
