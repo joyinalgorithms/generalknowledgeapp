@@ -33,20 +33,11 @@ export const DailyFactBanner: React.FC<DailyFactBannerProps> = ({
 
   return (
     <section className="relative overflow-hidden rounded-2xl border transition-all duration-300 mb-8 shadow-xl">
-      {/* Background Graphic & Scrim */}
-      <div className="absolute inset-0 bg-slate-950 pointer-events-none">
-        <img
-          src="/src/assets/images/ph_heritage_emerald_1790473705686.jpg"
-          alt="Philippine Heritage Emblem"
-          referrerPolicy="no-referrer"
-          className="w-full h-full object-cover opacity-25 object-center mix-blend-luminosity filter contrast-125"
-        />
-        <div className={`absolute inset-0 ${
-          isDark
-            ? 'bg-gradient-to-r from-slate-950 via-slate-950/95 to-slate-900/85'
-            : 'bg-gradient-to-r from-slate-950/90 via-slate-950/80 to-emerald-950/70'
-        }`} />
-      </div>
+      <div className={`absolute inset-0 pointer-events-none ${
+        isDark
+          ? 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800'
+          : 'bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600'
+      }`} />
 
       {/* Decorative Emerald Accent Border */}
       <div className="relative z-10 p-6 md:p-8 text-slate-100 flex flex-col justify-between min-h-[300px]">

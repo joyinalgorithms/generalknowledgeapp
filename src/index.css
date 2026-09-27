@@ -1,5 +1,31 @@
 @import "tailwindcss";
 
+@theme {
+  /* Calm ocean-blue accents and neutral blue-gray surfaces replace the old green/slate palette. */
+  --color-emerald-50: #eef7f8;
+  --color-emerald-100: #d8edef;
+  --color-emerald-200: #b5dadd;
+  --color-emerald-300: #83c1c7;
+  --color-emerald-400: #4da5b0;
+  --color-emerald-500: #2f8795;
+  --color-emerald-600: #256f7d;
+  --color-emerald-700: #205b68;
+  --color-emerald-800: #1d4b56;
+  --color-emerald-900: #1b3f49;
+  --color-emerald-950: #122c34;
+  --color-slate-50: #f4f7f8;
+  --color-slate-100: #e8eef0;
+  --color-slate-200: #d5e0e3;
+  --color-slate-300: #b4c4c9;
+  --color-slate-400: #82969d;
+  --color-slate-500: #60757d;
+  --color-slate-600: #4b626a;
+  --color-slate-700: #354b54;
+  --color-slate-800: #263b44;
+  --color-slate-900: #1b2d35;
+  --color-slate-950: #112027;
+}
+
 @layer base {
   :root {
     --font-display: 'Cinzel', serif;
@@ -13,9 +39,30 @@
   h1, h2, h3, .font-cinzel {
     font-family: var(--font-display);
   }
+
+  /* Raise muted text in light mode so supporting copy remains readable. */
+  .theme-light .text-slate-300 {
+    color: #354b54;
+  }
+
+  .theme-light .text-slate-400 {
+    color: #4b626a;
+  }
+
+  .theme-light .text-slate-500 {
+    color: #354b54;
+  }
+
+  .theme-light .text-slate-600 {
+    color: #263b44;
+  }
+
+  .theme-light .placeholder-slate-400::placeholder {
+    color: #60757d;
+  }
 }
 
-/* Custom scrollbar for refined deep slate & emerald look */
+/* Subtle scrollbar for the blue-gray interface. */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -26,20 +73,20 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(16, 185, 129, 0.25);
+  background: rgba(47, 135, 149, 0.28);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(16, 185, 129, 0.45);
+  background: rgba(47, 135, 149, 0.5);
 }
 
 @keyframes pulseEmerald {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.35);
+    box-shadow: 0 0 0 0 rgba(47, 135, 149, 0.35);
   }
   50% {
-    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+    box-shadow: 0 0 0 8px rgba(47, 135, 149, 0);
   }
 }
 

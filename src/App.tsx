@@ -68,7 +68,7 @@ export default function App() {
 
   return (
     <div
-      className={`min-h-screen flex flex-col font-sans transition-colors duration-200 ${
+      className={`min-h-screen flex flex-col font-sans transition-colors duration-200 ${isDark ? 'theme-dark' : 'theme-light'} ${
         isDark
           ? 'bg-slate-950 text-slate-100 selection:bg-emerald-500/20 selection:text-emerald-300'
           : 'bg-[#F8FAFC] text-slate-900 selection:bg-emerald-100 selection:text-emerald-950'

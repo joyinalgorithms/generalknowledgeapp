@@ -135,7 +135,6 @@ export const FACTS: Fact[] = [
     pronunciation: '/SEN-it/ (Senado ng Pilipinas)',
     citation: 'Article VI, Section 2, 1987 Philippine Constitution',
     audioNarrative: 'Did you know? The Philippine Senate is composed of only 24 senators elected at-large by the entire nation. Under Article 6 of the 1987 Constitution, each senator serves a six-year term with a two-consecutive term limit.',
-    image: '/src/assets/images/ph_heritage_emerald_1790473705686.jpg',
     tags: ['Senate', 'Congress', '1987 Constitution', 'Elections']
   },
   {
@@ -147,7 +146,6 @@ export const FACTS: Fact[] = [
     funFact: 'A Vice President who succeeds the presidency and serves for more than four years is likewise permanently barred from running for President.',
     citation: 'Article VII, Section 4, 1987 Philippine Constitution',
     audioNarrative: 'Did you know? The President of the Philippines serves a single, fixed six-year term and is constitutionally prohibited from ever seeking re-election, as mandated by the 1987 Constitution.',
-    image: '/src/assets/images/ph_heritage_emerald_1790473705686.jpg',
     tags: ['President', 'Executive Branch', 'Malacañang', 'Constitution']
   },
   {
@@ -399,7 +397,6 @@ export const FACTS: Fact[] = [
     funFact: 'Its summit slope is so gradual and its base is so enormous that an astronaut standing on its peak would not realize they are on a mountain—the summit curve vanishes beyond the Martian horizon.',
     citation: 'NASA Mars Exploration Program & Mars Global Surveyor MOLA Data',
     audioNarrative: 'Did you know? Olympus Mons on Mars is the largest volcano in the Solar System, towering nearly 22 kilometers high, three times the elevation of Mount Everest.',
-    image: '/src/assets/images/science_cosmos_gold_1790472177988.jpg',
     tags: ['Mars', 'Olympus Mons', 'Planets', 'NASA']
   },
   {

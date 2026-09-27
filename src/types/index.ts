@@ -56,7 +56,6 @@ export interface Fact {
     mandate: string;
   };
   audioNarrative?: string;
-  image?: string;
   tags: string[];
 }
 

@@ -73,18 +73,6 @@ export const FactCard: React.FC<FactCardProps> = ({
       {/* Visual Accent Top Bar */}
       <div className="h-1 w-full bg-gradient-to-r from-emerald-600 via-teal-400 to-cyan-500 opacity-80 group-hover:opacity-100 transition-opacity" />
 
-      {fact.image && (
-        <div className="relative h-44 w-full overflow-hidden bg-slate-950">
-          <img
-            src={fact.image}
-            alt={fact.title}
-            referrerPolicy="no-referrer"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-        </div>
-      )}
-
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
           {/* Unboxed Metadata Line (Zero-Pill Discipline) */}
