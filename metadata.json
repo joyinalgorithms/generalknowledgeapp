@@ -1,0 +1,6 @@
+{
+  "name": "Did you Know - Philippine Civics & Knowledge Atlas",
+  "description": "An authoritative Did You Know compendium covering Philippine government branches, agency acronyms (DPWH, DOH, PhilHealth, PAGASA, RHU), science, cosmos, math, world facts, with audio pronunciation, daily insights, bookmarks, and weekly quiz tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
