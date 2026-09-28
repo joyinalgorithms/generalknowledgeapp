@@ -12,7 +12,7 @@ import { audioSpeech } from './utils/audioSpeech';
 import { Landmark, ShieldCheck, Heart, Sparkles } from 'lucide-react';
 
 export default function App() {
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => getStoredTheme());
   const [activeTab, setActiveTab] = useState<ActiveTab>('explore');
   const [selectedCategory, setSelectedCategory] = useState<CategoryId>('all');
   const [bookmarkedIds, setBookmarkedIds] = useState<string[]>([]);
