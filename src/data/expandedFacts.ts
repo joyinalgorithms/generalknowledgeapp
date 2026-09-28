@@ -32,16 +32,58 @@ const lenses = [
   'A question to explore'
 ];
 
+const topicDefinitions: Record<string, string> = {
+  'The Milky Way': 'The Milky Way is the spiral-shaped galaxy that contains our Sun, Earth, and billions of other stars.',
+  Exoplanets: 'Exoplanets are planets that orbit stars outside our Solar System.',
+  'The asteroid belt': 'The asteroid belt is a wide region between Mars and Jupiter filled with rocky objects left over from the Solar System\'s formation.',
+  Comets: 'Comets are icy space objects that release gas and dust to form a glowing cloud and tail when they approach the Sun.',
+  'Solar eclipses': 'A solar eclipse happens when the Moon passes between Earth and the Sun and blocks some or all of the sunlight.',
+  'Lunar phases': 'Lunar phases are the changing shapes of the Moon\'s sunlit half that we see from Earth during its orbit.',
+  Mars: 'Mars is a cold, rocky planet with a thin atmosphere, iron-rich soil, polar ice, and evidence of ancient flowing water.',
+  Jupiter: 'Jupiter is the largest planet in our Solar System and is a gas giant made mostly of hydrogen and helium.',
+  'Saturn rings': 'Saturn\'s rings are countless pieces of ice and rock orbiting the planet in thin, wide bands.',
+  Venus: 'Venus is a rocky planet covered by a thick carbon-dioxide atmosphere that makes its surface hotter than any other planet.',
+  Mercury: 'Mercury is the smallest planet and the closest planet to the Sun, with extreme temperature changes between day and night.',
+  'The Kuiper Belt': 'The Kuiper Belt is a distant ring of icy objects beyond Neptune, including dwarf planets such as Pluto.',
+  Nebulae: 'Nebulae are enormous clouds of gas and dust in space. Some are places where new stars form, while others are the remains of dying stars.',
+  'Galaxy clusters': 'Galaxy clusters are groups of hundreds or thousands of galaxies held together by gravity.',
+  'Stellar nurseries': 'Stellar nurseries are dense parts of nebulae where gas and dust collapse under gravity to make new stars.',
+  Supernovae: 'A supernova is a powerful stellar explosion that happens when a massive star dies or a white dwarf is destroyed.',
+  Pulsars: 'Pulsars are rapidly spinning neutron stars that send regular beams of radio waves and other radiation toward space.',
+  'Dark matter': 'Dark matter is invisible matter that does not emit light but whose gravity helps hold galaxies together.',
+  'Space telescopes': 'Space telescopes are instruments above Earth\'s atmosphere that collect clearer images and signals from distant objects.',
+  'Orbital mechanics': 'Orbital mechanics is the study of how gravity controls the paths of planets, moons, satellites, and spacecraft.'
+};
+
+const categoryDefinitions: Record<FactCategory, string> = {
+  ph_gov: 'a subject about how Philippine government institutions make decisions and serve the public',
+  ph_agency: 'a Philippine government agency, its responsibility, or a public service',
+  filipino: 'a part of Philippine history, culture, language, or heritage',
+  banks_finance: 'an idea about money, saving, borrowing, investing, or financial decisions',
+  myths_debunked: 'a common claim that can be checked against scientific evidence',
+  biology_animals: 'an idea about living things, animals, plants, or how bodies work',
+  chemistry_nutrition: 'an idea about matter, chemical reactions, food, or nutrients',
+  tech_ai: 'an idea about computers, digital tools, artificial intelligence, or online safety',
+  forensics_psych: 'an idea about human behavior, thinking, evidence, or criminal investigation',
+  arts_colors: 'an idea about visual art, design, music, film, or creative expression',
+  language_english: 'an idea about how people create, use, and understand language',
+  science: 'an idea about the natural world and the evidence used to understand it',
+  galaxy: 'an object, event, or process in space',
+  math: 'an idea used to describe numbers, patterns, shapes, chance, or logical relationships',
+  civics: 'a right, responsibility, or rule that helps people participate fairly in society',
+  world: 'a place, feature, or pattern found on Earth'
+};
+
 const makeTopicFacts = (category: FactCategory, topicList: string[]): Fact[] =>
   topicList.flatMap((topic, topicIndex) => lenses.map((lens, lensIndex) => ({
     id: `catalog-${category}-${topicIndex + 1}-${lensIndex + 1}`,
     title: `${topic}: ${lens}`,
     category,
-    digest: `${topic} is a useful subject in ${category.replaceAll('_', ' ')}. This entry highlights ${lens.toLowerCase()} so the idea can be reviewed from a different angle.`,
-    deepDive: `Explore ${topic} by connecting its definition, evidence, examples, and everyday relevance. Comparing these details helps build durable knowledge instead of relying on a single isolated statement.`,
+    simpleDefinition: topicDefinitions[topic] || `${topic} is ${categoryDefinitions[category]}.`,
+    digest: topicDefinitions[topic] || `${topic} is ${categoryDefinitions[category]}.`,
+    deepDive: `${topicDefinitions[topic] || `${topic} is ${categoryDefinitions[category]}.`} The ${lens.toLowerCase()} view helps connect this idea to real examples and everyday decisions.`,
     funFact: `A good way to investigate ${topic} is to compare a primary source with a trusted reference work.`,
     citation: 'General reference entry; verify current details with the cited field authority',
-    audioNarrative: `Did you know? This entry explores ${topic}, focusing on ${lens.toLowerCase()}.`,
     tags: [topic, category.replaceAll('_', ' ')]
   })));
 
