@@ -291,15 +291,36 @@ const topicDefinitions: Record<string, string> = {
   'Toads and warts': 'Handling a toad does not cause human warts; warts are caused by specific human papillomaviruses that spread between people or contaminated surfaces.'
 };
 
+function getSimpleDefinition(definition: string): string {
+  const firstSentence = definition.match(/^.*?[.!?](?:\s|$)/)?.[0].trim();
+  return firstSentence || definition;
+}
+
+function getDetailedDefinition(topic: string, definition: string, lens: string): string {
+  const simpleDefinition = getSimpleDefinition(definition);
+  if (definition !== simpleDefinition) return definition;
+
+  const contextByLens: Record<string, string> = {
+    'What it means': `The important idea is to recognize ${topic.toLowerCase()} by this defining feature.`,
+    'How it works': `Understanding ${topic.toLowerCase()} means looking at the parts or process that produce this result.`,
+    'Why it matters': `This matters because knowing what ${topic.toLowerCase()} means helps people interpret evidence and make better decisions.`,
+    'A historical view': `Its meaning has been shaped by the way people have studied, used, or experienced ${topic.toLowerCase()} over time.`,
+    'A practical connection': `In everyday life, this idea helps explain situations in which ${topic.toLowerCase()} appears or affects people.`,
+    'A question to explore': `A useful next question is what evidence, examples, or real-world cases can show ${topic.toLowerCase()} in action.`
+  };
+
+  return `${definition} ${contextByLens[lens]}`;
+}
+
 const makeTopicFacts = (category: FactCategory, topicList: string[]): Fact[] =>
   topicList.filter(topic => topicDefinitions[topic]).flatMap((topic, topicIndex) => lenses.map((lens, lensIndex) => ({
     id: `catalog-${category}-${topicIndex + 1}-${lensIndex + 1}`,
     title: `${topic}: ${lens}`,
     category,
-    simpleDefinition: topicDefinitions[topic],
-    digest: topicDefinitions[topic],
-    deepDive: topicDefinitions[topic],
-    citation: topicDefinitions[topic] ? 'General astronomy reference; verify current measurements with NASA or ESA' : 'General reference entry; verify details with the relevant field authority',
+    simpleDefinition: getSimpleDefinition(topicDefinitions[topic]),
+    digest: getSimpleDefinition(topicDefinitions[topic]),
+    deepDive: getDetailedDefinition(topic, topicDefinitions[topic], lens),
+    citation: category === 'galaxy' ? 'General astronomy reference; verify current measurements with NASA or ESA' : 'General reference entry; verify details with the relevant field authority',
     tags: [topic, category.replaceAll('_', ' ')]
   })));
 
