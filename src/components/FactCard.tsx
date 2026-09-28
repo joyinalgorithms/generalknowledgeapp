@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Bookmark, BookmarkCheck, Share2, Check, ChevronDown, ChevronUp, Sparkles, BookOpen } from 'lucide-react';
 import { Fact } from '../types';
 import { AudioPlayerButton } from './AudioPlayerButton';
+import { getFactNarration, getFactSimpleDefinition } from '../utils/audioSpeech';
 
 interface FactCardProps {
   fact: Fact;
@@ -109,7 +110,7 @@ export const FactCard: React.FC<FactCardProps> = ({
             </div>
           )}
 
-          {/* Digest Box - Instant takeaway */}
+          {/* Plain-language definition */}
           <div
             className={`p-3.5 rounded-lg border-l-2 mb-4 leading-relaxed text-sm ${
               isDark
@@ -118,9 +119,9 @@ export const FactCard: React.FC<FactCardProps> = ({
             }`}
           >
             <p className="font-medium text-emerald-600 dark:text-emerald-400 text-xs mb-1 uppercase tracking-wider">
-              Core Insight
+              Simple Definition
             </p>
-            <p>{fact.digest}</p>
+            <p>{getFactSimpleDefinition(fact)}</p>
           </div>
 
           {/* Acronym Quick Decoder trigger */}
@@ -179,7 +180,7 @@ export const FactCard: React.FC<FactCardProps> = ({
           {/* Audio Narration Button */}
           <AudioPlayerButton
             id={fact.id}
-            textToSpeak={fact.audioNarrative || `${fact.title}. ${fact.digest} ${fact.deepDive}`}
+            textToSpeak={getFactNarration(fact)}
             title={fact.title}
             pronunciation={fact.pronunciation}
             activePlayingId={activePlayingId}

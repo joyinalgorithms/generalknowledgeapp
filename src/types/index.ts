@@ -45,6 +45,7 @@ export interface Fact {
   title: string;
   category: Exclude<CategoryId, 'all'>;
   digest: string;
+  simpleDefinition?: string;
   deepDive: string;
   funFact?: string;
   pronunciation?: string;

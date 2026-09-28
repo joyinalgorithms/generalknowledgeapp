@@ -120,6 +120,63 @@ export const CATEGORIES: CategoryInfo[] = [
     shortLabel: 'World',
     icon: 'Globe2',
     description: 'Fascinating geopolitical anomalies, carbon-negative kingdoms, geographic extremes, and global history.'
+  },
+  // --- NEW CATEGORIES ---
+  {
+    id: 'space_exploration',
+    label: 'Space Exploration & Rockets',
+    shortLabel: 'Space',
+    icon: 'Rocket',
+    description: 'Apollo landings, reusable rockets, Mars rovers, International Space Station, and humanity\'s push beyond Earth.'
+  },
+  {
+    id: 'quantum',
+    label: 'Quantum Physics & Reality',
+    shortLabel: 'Quantum',
+    icon: 'Atom',
+    description: 'Superposition, entanglement, quantum tunneling, uncertainty principle, and the strange rules of the subatomic world.'
+  },
+  {
+    id: 'earth_science',
+    label: 'Earth, Climate & Geology',
+    shortLabel: 'Earth',
+    icon: 'Mountain',
+    description: 'Plate tectonics, deep ocean trenches, magnetic field flips, climate cycles, and the living planet\'s hidden engines.'
+  },
+  {
+    id: 'engineering_industry',
+    label: 'Engineering & Industry',
+    shortLabel: 'Industry',
+    icon: 'Factory',
+    description: 'How bridges stand, semiconductors are made, renewable energy works, and industrial processes that power modern life.'
+  },
+  {
+    id: 'human_body',
+    label: 'Human Body & Medicine',
+    shortLabel: 'Body',
+    icon: 'Heart',
+    description: 'Microbiome, brain plasticity, immune system, longevity science, and astonishing facts about the human machine.'
+  },
+  {
+    id: 'inventions_innovation',
+    label: 'Inventions & Innovation',
+    shortLabel: 'Inventions',
+    icon: 'Lightbulb',
+    description: 'Accidental discoveries, transformative patents, materials science breakthroughs, and the stories behind everyday tech.'
+  },
+  {
+    id: 'energy_power',
+    label: 'Energy & Power Systems',
+    shortLabel: 'Energy',
+    icon: 'Zap',
+    description: 'Nuclear fusion, solar efficiency, battery chemistry, grid stability, and the physics of powering civilization.'
+  },
+  {
+    id: 'ocean_deep',
+    label: 'Oceans & Deep Sea',
+    shortLabel: 'Oceans',
+    icon: 'Waves',
+    description: 'Mariana Trench pressures, hydrothermal vents, ocean currents, and the unexplored abyssal frontier.'
   }
 ];
 
@@ -610,7 +667,7 @@ export const FACTS: Fact[] = [
     tags: ['Jose Rizal', 'Polymath', 'Linguistics', 'Dapitan']
   },
 
-  // --- MYTHS DEBUNKED (SOME WRONG FACTS THAT PEOPLE LIVED BY) ---
+  // --- MYTHS DEBUNKED ---
   {
     id: 'myth-brain-10-percent',
     title: 'Debunked: Humans Do NOT Use Only 10% of Their Brains',
@@ -997,5 +1054,493 @@ export const FACTS: Fact[] = [
     audioNarrative: 'Did you know? The word with the most meanings in the English language is the word "set". The Oxford English Dictionary lists over four hundred and thirty distinct definitions for this single word.',
     tags: ['Oxford English Dictionary', 'Vocabulary', 'Lexicography', 'Word Records']
   },
+
+  // ============================================================
+  // NEW FACTS — SPACE EXPLORATION
+  // ============================================================
+  {
+    id: 'space-apollo-11',
+    title: 'Apollo 11 Landed Humans on the Moon with Less Computing Power Than a Smartphone',
+    category: 'space_exploration',
+    digest: 'The Apollo Guidance Computer that guided Neil Armstrong and Buzz Aldrin to the lunar surface in 1969 had roughly 64 kilobytes of memory and ran at 0.043 MHz.',
+    deepDive: 'Designed by MIT Instrumentation Laboratory, the AGC used integrated circuits for the first time in a major project and featured a unique "core rope" memory woven by hand. Despite its tiny specs by modern standards, it performed real-time navigation, thruster control, and abort sequences that made the first Moon landing possible.',
+    funFact: 'The entire Apollo program software was written in assembly language and verified by teams of programmers who literally walked through every line of code by hand before flight.',
+    citation: 'NASA Apollo Flight Journal & MIT Instrumentation Laboratory Archives',
+    audioNarrative: 'Did you know? The computer that landed humans on the Moon in 1969 had less memory than a modern digital watch. Yet it guided the Eagle lander with pinpoint precision using hand-woven core rope memory.',
+    tags: ['Apollo 11', 'Moon Landing', 'Computing History', 'NASA']
+  },
+  {
+    id: 'space-reusable-rockets',
+    title: 'Reusable Rockets Cut Launch Costs by More Than 90 Percent',
+    category: 'space_exploration',
+    digest: 'SpaceX Falcon 9 first stages routinely land themselves on drone ships or landing pads and are flown again, dropping the cost per kilogram to orbit dramatically.',
+    deepDive: 'Traditional expendable rockets discarded their boosters into the ocean after a single use. By recovering and reflying the most expensive part of the vehicle—the first-stage engines and tanks—operators have reduced the marginal cost of a launch from tens of millions to a few million dollars. As of 2025, some Falcon 9 boosters have flown more than 20 times.',
+    funFact: 'The landing legs and grid fins on a Falcon 9 are designed to survive hypersonic re-entry heating and then deploy for a soft touchdown within meters of the target.',
+    citation: 'SpaceX Flight History & NASA Commercial Crew Program',
+    audioNarrative: 'Did you know? Modern reusable rockets land themselves after launch and fly again, cutting the cost of reaching space by more than ninety percent compared with single-use rockets.',
+    tags: ['SpaceX', 'Reusable Rockets', 'Falcon 9', 'Space Economics']
+  },
+  {
+    id: 'space-iss-orbit',
+    title: 'The International Space Station Orbits Earth Every 90 Minutes at 28,000 km/h',
+    category: 'space_exploration',
+    digest: 'The ISS travels at approximately 7.66 kilometers per second, completing one full orbit of Earth roughly every 92 minutes and seeing 16 sunrises and sunsets every day.',
+    deepDive: 'At an average altitude of 400 kilometers, the station experiences continuous free-fall, creating the sensation of weightlessness. Crews live in modules pressurized to Earth-like atmosphere and conduct experiments in microgravity that cannot be performed on the ground, from fluid physics to human physiology.',
+    funFact: 'Astronauts on the ISS must exercise about two hours every day on specialized machines to counteract bone density loss and muscle atrophy caused by living without gravity.',
+    citation: 'NASA ISS Program & ESA Human Spaceflight',
+    audioNarrative: 'Did you know? The International Space Station races around Earth at twenty-eight thousand kilometers per hour, completing an orbit every ninety minutes and witnessing sixteen sunrises each day.',
+    tags: ['ISS', 'Microgravity', 'Space Station', 'Orbit']
+  },
+  {
+    id: 'space-mars-perseverance',
+    title: 'Perseverance Rover Collects Mars Samples for Future Return to Earth',
+    category: 'space_exploration',
+    digest: 'NASA\'s Perseverance rover is caching rock and soil samples in sealed tubes on the Martian surface, waiting for a future mission to bring them back to Earth laboratories.',
+    deepDive: 'Landing in Jezero Crater in 2021, Perseverance uses a sophisticated drill and sample-handling system. The planned Mars Sample Return campaign will involve a fetch rover, a Mars Ascent Vehicle, and an Earth-return orbiter—the most complex interplanetary logistics chain ever attempted.',
+    funFact: 'Perseverance also carried the Ingenuity helicopter, the first powered aircraft to fly on another planet, proving that controlled flight is possible in the thin Martian atmosphere.',
+    citation: 'NASA Jet Propulsion Laboratory Mars 2020 Mission',
+    audioNarrative: 'Did you know? The Perseverance rover is collecting sealed samples of Martian rock that a future mission will bring back to Earth, potentially revealing whether life ever existed on Mars.',
+    tags: ['Mars', 'Perseverance', 'Sample Return', 'Astrobiology']
+  },
+  {
+    id: 'space-voyager-golden-record',
+    title: 'Voyager Golden Records Carry Earth\'s Sounds Into Interstellar Space',
+    category: 'space_exploration',
+    digest: 'Both Voyager 1 and 2 carry gold-plated copper discs containing greetings in 55 languages, music from many cultures, and images encoded as analog signals.',
+    deepDive: 'Launched in 1977, the Voyagers are now beyond the heliosphere. The Golden Record was curated by a committee led by Carl Sagan and includes Bach, Chuck Berry, whale songs, and a message from then-UN Secretary-General Kurt Waldheim. The records are expected to remain readable for over a billion years.',
+    funFact: 'Voyager 1 is currently more than 24 billion kilometers from Earth and still transmits data using a radio transmitter whose power is less than that of a refrigerator light bulb.',
+    citation: 'NASA Jet Propulsion Laboratory Voyager Mission & Carl Sagan Archives',
+    audioNarrative: 'Did you know? The Voyager spacecraft carry golden records filled with Earth\'s music, languages, and images, now traveling through interstellar space as humanity\'s message in a bottle.',
+    tags: ['Voyager', 'Golden Record', 'Interstellar', 'Carl Sagan']
+  },
+
+  // ============================================================
+  // NEW FACTS — QUANTUM PHYSICS
+  // ============================================================
+  {
+    id: 'quantum-superposition',
+    title: 'Quantum Superposition: Particles Exist in Multiple States Until Measured',
+    category: 'quantum',
+    digest: 'In the quantum realm a particle can be in a combination of states at once—spin up and spin down, or in two places—until an observation forces it into one definite outcome.',
+    deepDive: 'The famous Schrödinger\'s cat thought experiment dramatizes this: a cat in a sealed box is described as both alive and dead until the box is opened. Real experiments with photons, electrons, and even large molecules confirm that the mathematical superposition is physically real and collapses only upon measurement or interaction with the environment.',
+    funFact: 'Quantum computers exploit superposition by letting qubits represent 0 and 1 simultaneously, enabling them to explore vast solution spaces in parallel.',
+    citation: 'Dirac, "The Principles of Quantum Mechanics" & modern quantum information textbooks',
+    audioNarrative: 'Did you know? In quantum physics a particle can exist in many states at once until measured. This superposition is the foundation of quantum computing and the strange behavior of the microscopic world.',
+    tags: ['Superposition', 'Quantum Mechanics', 'Schrödinger', 'Qubits']
+  },
+  {
+    id: 'quantum-tunneling',
+    title: 'Quantum Tunneling Allows Particles to Pass Through Barriers',
+    category: 'quantum',
+    digest: 'Particles can appear on the other side of a potential energy barrier even when they lack the classical energy to climb over it—a purely quantum effect called tunneling.',
+    deepDive: 'Tunneling is responsible for nuclear fusion in the Sun (protons overcoming electrostatic repulsion), alpha decay of radioactive nuclei, and the operation of the scanning tunneling microscope. In electronics, tunnel diodes and flash memory rely on controlled electron tunneling.',
+    funFact: 'Without quantum tunneling, the Sun would not shine: classical physics predicts protons would never get close enough to fuse at the temperatures inside stars.',
+    citation: 'Gamow, "Quantum Theory of Atomic Nucleus" & modern nuclear astrophysics',
+    audioNarrative: 'Did you know? Quantum tunneling lets particles slip through energy barriers they should not be able to cross. This effect powers the Sun\'s fusion and enables modern electronics.',
+    tags: ['Tunneling', 'Nuclear Fusion', 'Quantum Effects', 'Electronics']
+  },
+  {
+    id: 'quantum-uncertainty',
+    title: 'Heisenberg Uncertainty Principle: You Cannot Know Position and Momentum Exactly',
+    category: 'quantum',
+    digest: 'The more precisely you measure a particle\'s position, the less precisely you can know its momentum, and vice versa—an intrinsic limit, not a measurement flaw.',
+    deepDive: 'Werner Heisenberg showed in 1927 that the product of the uncertainties in position and momentum is always at least on the order of Planck\'s constant divided by 4π. This is not due to clumsy instruments; it is a fundamental feature of wave-particle duality encoded in the mathematics of quantum mechanics.',
+    funFact: 'The uncertainty principle also applies to energy and time: a particle can briefly "borrow" energy from the vacuum for a short interval, enabling virtual particles and quantum fluctuations.',
+    citation: 'Heisenberg, "Über den anschaulichen Inhalt der quantentheoretischen Kinematik und Mechanik" (1927)',
+    audioNarrative: 'Did you know? The Heisenberg uncertainty principle states that you can never know both the exact position and exact momentum of a particle at the same time. This is a fundamental law of nature, not a limitation of instruments.',
+    tags: ['Uncertainty Principle', 'Heisenberg', 'Quantum Limits', 'Planck']
+  },
+  {
+    id: 'quantum-zero-point',
+    title: 'Zero-Point Energy: Empty Space is Never Truly Empty',
+    category: 'quantum',
+    digest: 'Even at absolute zero temperature, quantum fields retain a residual energy called zero-point energy, causing perpetual microscopic fluctuations.',
+    deepDive: 'In quantum field theory the vacuum is a seething sea of virtual particle-antiparticle pairs that constantly appear and annihilate. This energy contributes to the Casimir effect (attractive force between metal plates) and may be related to the cosmological constant that drives the accelerated expansion of the universe.',
+    funFact: 'The Casimir force has been measured in laboratories and is already used in some micro-electromechanical systems (MEMS) designs.',
+    citation: 'Casimir & Polder (1948) & modern quantum field theory texts',
+    audioNarrative: 'Did you know? According to quantum physics, empty space is never truly empty. It is filled with zero-point energy and virtual particles that flicker in and out of existence.',
+    tags: ['Zero-Point Energy', 'Vacuum Fluctuations', 'Casimir Effect', 'Quantum Field Theory']
+  },
+
+  // ============================================================
+  // NEW FACTS — EARTH SCIENCE
+  // ============================================================
+  {
+    id: 'earth-plate-tectonics',
+    title: 'Earth\'s Continents Drift on Tectonic Plates at the Speed of Fingernail Growth',
+    category: 'earth_science',
+    digest: 'The rigid outer shell of Earth is broken into plates that move a few centimeters per year, driven by heat from the planet\'s interior.',
+    deepDive: 'Plate tectonics explains earthquakes, volcanoes, mountain building, and the distribution of fossils across oceans. The theory was accepted only in the 1960s after seafloor spreading and magnetic striping provided decisive evidence. The Philippines sits on the complex junction of the Eurasian, Philippine Sea, and Sunda plates.',
+    funFact: 'Over 250 million years the continents have assembled into supercontinents (Pangaea) and broken apart again multiple times in Earth\'s history.',
+    citation: 'USGS Plate Tectonics & Wegener, "The Origin of Continents and Oceans"',
+    audioNarrative: 'Did you know? Earth\'s continents slowly drift on tectonic plates at roughly the speed your fingernails grow. This motion creates earthquakes, volcanoes, and mountain ranges.',
+    tags: ['Plate Tectonics', 'Continental Drift', 'Earthquakes', 'Geology']
+  },
+  {
+    id: 'earth-magnetic-field',
+    title: 'Earth\'s Magnetic Field Flips Polarity Every Few Hundred Thousand Years',
+    category: 'earth_science',
+    digest: 'The geomagnetic field generated by the liquid outer core has reversed direction hundreds of times; the last major reversal was about 780,000 years ago.',
+    deepDive: 'During a reversal the field weakens but does not disappear, still providing partial protection from solar wind. Evidence is recorded in lava flows and seafloor magnetic stripes. A weaker field during reversals may allow more cosmic radiation to reach the surface, though no mass extinctions are clearly linked to past flips.',
+    funFact: 'Compasses would point south instead of north after a full reversal, and migratory animals that use magnetoreception would need to relearn their navigation.',
+    citation: 'International Association of Geomagnetism and Aeronomy & Nature Geoscience reviews',
+    audioNarrative: 'Did you know? Earth\'s magnetic field has flipped its north and south poles hundreds of times. The last full reversal happened about seven hundred and eighty thousand years ago.',
+    tags: ['Magnetic Field', 'Geomagnetic Reversal', 'Core Dynamo', 'Paleomagnetism']
+  },
+  {
+    id: 'earth-deep-carbon',
+    title: 'Most of Earth\'s Carbon is Locked in the Mantle and Crust, Not the Atmosphere',
+    category: 'earth_science',
+    digest: 'The atmosphere and oceans hold only a tiny fraction of Earth\'s total carbon; the vast majority resides in carbonate rocks and the deep mantle.',
+    deepDive: 'Through the long-term carbon cycle, carbon dioxide is drawn down by silicate weathering, deposited as limestone, and subducted into the mantle. Volcanic outgassing returns some of it over geologic time. Understanding this deep cycle is essential for modeling climate on million-year timescales.',
+    funFact: 'If all the carbon currently stored in carbonate rocks were released as CO₂, the atmosphere would become hundreds of times denser—similar to the runaway greenhouse on Venus.',
+    citation: 'Deep Carbon Observatory & Nature Reviews Earth & Environment',
+    audioNarrative: 'Did you know? Almost all of Earth\'s carbon is locked inside rocks and the mantle, not floating in the air. The atmosphere holds only a tiny fraction of the planet\'s total carbon budget.',
+    tags: ['Carbon Cycle', 'Mantle', 'Climate', 'Geochemistry']
+  },
+  {
+    id: 'earth-water-origin',
+    title: 'Earth\'s Oceans May Have Arrived on Asteroids and Comets',
+    category: 'earth_science',
+    digest: 'Isotopic ratios of hydrogen in seawater closely match those found in certain carbonaceous chondrite meteorites, suggesting a major contribution from outer-solar-system bodies.',
+    deepDive: 'Early Earth was hot and dry after the Moon-forming impact. Water and other volatiles were later delivered by asteroids and comets during the Late Heavy Bombardment period roughly 4 billion years ago. Some water may also have been trapped in the mantle from the beginning and outgassed later.',
+    funFact: 'A single large comet impact could have delivered enough water to fill a significant fraction of today\'s oceans.',
+    citation: 'Nature Astronomy & meteorite isotope studies',
+    audioNarrative: 'Did you know? Much of the water in Earth\'s oceans may have arrived billions of years ago on asteroids and comets that bombarded the young planet.',
+    tags: ['Ocean Origin', 'Asteroids', 'Comets', 'Planetary Science']
+  },
+
+  // ============================================================
+  // NEW FACTS — ENGINEERING & INDUSTRY
+  // ============================================================
+  {
+    id: 'eng-semiconductor-fabrication',
+    title: 'Modern Chips Are Built with Features Smaller Than a Virus',
+    category: 'engineering_industry',
+    digest: 'Leading semiconductor fabs pattern transistors with features around 3 nanometers—smaller than many viruses and approaching atomic scales.',
+    deepDive: 'Extreme ultraviolet (EUV) lithography uses 13.5 nm wavelength light generated by laser-produced plasma to print circuit patterns. A single advanced logic chip can contain tens of billions of transistors. The process requires cleanrooms cleaner than surgical operating theaters and costs tens of billions of dollars to build a new fab.',
+    funFact: 'A modern smartphone processor contains more transistors than there were people alive on Earth when the first integrated circuit was invented in 1958.',
+    citation: 'IEEE Spectrum & semiconductor industry roadmaps (IRDS)',
+    audioNarrative: 'Did you know? The transistors inside modern computer chips are smaller than many viruses. Factories use extreme ultraviolet light to etch features just a few nanometers wide.',
+    tags: ['Semiconductors', 'EUV Lithography', 'Nanotechnology', 'Chips']
+  },
+  {
+    id: 'eng-suspension-bridge',
+    title: 'Suspension Bridges Hang the Roadway from Cables in Tension',
+    category: 'engineering_industry',
+    digest: 'In a suspension bridge the deck is hung from vertical suspenders attached to main cables that pass over towers and are anchored in the ground.',
+    deepDive: 'The main cables are made of thousands of high-strength steel wires. The towers compress under the weight while the cables stay in pure tension. This design allows the longest spans in the world, such as the 1,991-meter main span of the Akashi Kaikyō Bridge in Japan.',
+    funFact: 'The Golden Gate Bridge\'s main cables each contain 27,572 individual wires and weigh about 11,000 tons apiece.',
+    citation: 'Structural engineering textbooks & Akashi Kaikyō Bridge Authority',
+    audioNarrative: 'Did you know? Suspension bridges support their roadways from giant cables that are always in tension. This design enables the longest bridge spans ever built.',
+    tags: ['Bridges', 'Structural Engineering', 'Cables', 'Civil Engineering']
+  },
+  {
+    id: 'eng-steel-making',
+    title: 'Modern Steel is Made by Blowing Oxygen Through Molten Iron',
+    category: 'engineering_industry',
+    digest: 'The basic oxygen furnace converts pig iron into steel in under an hour by injecting pure oxygen that burns out excess carbon and impurities.',
+    deepDive: 'Invented in the 1950s, the process replaced the slower open-hearth method. Today more than 70% of the world\'s steel is produced this way. Electric arc furnaces that melt scrap steel account for most of the remainder and are key to recycling.',
+    funFact: 'A single basic oxygen furnace can produce a 300-ton batch of steel in about 40 minutes—enough metal to build several large trucks.',
+    citation: 'World Steel Association & metallurgical engineering references',
+    audioNarrative: 'Did you know? Modern steel is made by blasting pure oxygen through molten iron, removing carbon and impurities in less than an hour to produce hundreds of tons at a time.',
+    tags: ['Steel', 'Metallurgy', 'Basic Oxygen Furnace', 'Industry']
+  },
+  {
+    id: 'eng-container-shipping',
+    title: 'Shipping Containers Standardized Global Trade in 1956',
+    category: 'engineering_industry',
+    digest: 'The intermodal shipping container invented by Malcom McLean transformed freight transport by allowing cargo to move seamlessly from ship to truck to train without unpacking.',
+    deepDive: 'Standard 20-foot and 40-foot containers (TEUs and FEUs) reduced loading times from days to hours and cut theft and damage. Today more than 80% of non-bulk cargo travels in containers, and the largest ships can carry over 24,000 TEUs.',
+    funFact: 'If all the shipping containers in the world were lined up end to end, they would stretch more than halfway to the Moon.',
+    citation: 'Marc Levinson, "The Box" & World Shipping Council statistics',
+    audioNarrative: 'Did you know? The humble steel shipping container invented in 1956 revolutionized world trade by letting cargo move from ship to truck to train without ever being unpacked.',
+    tags: ['Containers', 'Logistics', 'Globalization', 'Shipping']
+  },
+
+  // ============================================================
+  // NEW FACTS — HUMAN BODY & MEDICINE
+  // ============================================================
+  {
+    id: 'body-microbiome',
+    title: 'Your Body Contains Roughly as Many Microbial Cells as Human Cells',
+    category: 'human_body',
+    digest: 'The human microbiome—bacteria, archaea, viruses, and fungi living on and in us—numbers in the tens of trillions and influences digestion, immunity, and even mood.',
+    deepDive: 'Most microbes reside in the gut. They break down fiber we cannot digest, synthesize certain vitamins, and train the immune system. Disruptions (dysbiosis) are linked to obesity, inflammatory bowel disease, and neurological conditions. Fecal microbiota transplantation is an emerging therapy for recurrent C. difficile infection.',
+    funFact: 'A newborn\'s gut is nearly sterile; the microbiome is seeded during birth and the first years of life, shaped by diet, environment, and antibiotics.',
+    citation: 'Human Microbiome Project & Nature Reviews Microbiology',
+    audioNarrative: 'Did you know? Your body hosts roughly as many microbial cells as human cells. These microscopic partners help digest food, train your immune system, and even influence your mood.',
+    tags: ['Microbiome', 'Gut Bacteria', 'Immunology', 'Health']
+  },
+  {
+    id: 'body-neuroplasticity',
+    title: 'The Adult Brain Remains Capable of Rewiring Itself Throughout Life',
+    category: 'human_body',
+    digest: 'Neuroplasticity allows neurons to form new connections, strengthen existing ones, and even generate limited numbers of new neurons in certain regions well into old age.',
+    deepDive: 'Learning a new skill, recovering from stroke, and adapting to sensory loss all rely on plastic changes. London taxi drivers who memorize the city\'s complex street layout show measurable enlargement of the posterior hippocampus. Physical exercise, sleep, and enriched environments enhance plasticity.',
+    funFact: 'Blind people who read Braille often show expansion of the brain areas that process touch, sometimes recruiting visual cortex for tactile processing.',
+    citation: 'Neuroscience textbooks & Maguire et al. taxi-driver studies',
+    audioNarrative: 'Did you know? Your brain can rewire itself throughout life. Learning new skills, recovering from injury, and even memorizing city maps physically change the structure of neural connections.',
+    tags: ['Neuroplasticity', 'Brain', 'Learning', 'Neuroscience']
+  },
+  {
+    id: 'body-immune-memory',
+    title: 'Vaccines Train the Immune System to Remember Pathogens for Decades',
+    category: 'human_body',
+    digest: 'Adaptive immunity creates long-lived memory B and T cells that recognize a pathogen\'s molecular signature and mount a rapid response upon re-exposure.',
+    deepDive: 'Vaccines present harmless versions or pieces of a pathogen so the body generates memory cells without causing disease. Some vaccines (measles, yellow fever) can provide lifelong protection; others require boosters. mRNA vaccines deliver genetic instructions for the body to temporarily produce the antigen itself.',
+    funFact: 'The smallpox vaccine, based on the related vaccinia virus, enabled the complete eradication of smallpox from nature—the only human disease so far eliminated.',
+    citation: 'WHO vaccine immunology & Plotkin\'s Vaccines textbook',
+    audioNarrative: 'Did you know? Vaccines teach your immune system to recognize dangerous pathogens so that memory cells can fight them off quickly if you ever encounter the real disease.',
+    tags: ['Vaccines', 'Immunology', 'Memory Cells', 'Public Health']
+  },
+  {
+    id: 'body-telomeres',
+    title: 'Telomeres Are Protective Caps on Chromosomes That Shorten with Age',
+    category: 'human_body',
+    digest: 'Each time a cell divides, the telomeres at the ends of its chromosomes get a little shorter; when they become critically short the cell stops dividing or dies.',
+    deepDive: 'The enzyme telomerase can rebuild telomeres and is highly active in stem cells and most cancer cells. Lifestyle factors—chronic stress, smoking, obesity—accelerate telomere shortening, while exercise and healthy diet are associated with longer telomeres. Telomere biology is a major focus of aging research.',
+    funFact: 'Elizabeth Blackburn, Carol Greider, and Jack Szostak won the 2009 Nobel Prize for discovering how telomeres and telomerase protect chromosomes.',
+    citation: 'Nobel Prize in Physiology or Medicine 2009 & aging research reviews',
+    audioNarrative: 'Did you know? Telomeres are protective caps on the ends of your chromosomes that shorten every time a cell divides. Their length is one of the molecular clocks of aging.',
+    tags: ['Telomeres', 'Aging', 'Chromosomes', 'Longevity']
+  },
+
+  // ============================================================
+  // NEW FACTS — INVENTIONS & INNOVATION
+  // ============================================================
+  {
+    id: 'inv-penicillin',
+    title: 'Penicillin Was Discovered by Accident When Mold Contaminated a Petri Dish',
+    category: 'inventions_innovation',
+    digest: 'In 1928 Alexander Fleming noticed that a mold growing on a discarded bacterial culture plate had killed the surrounding staphylococci—the first antibiotic.',
+    deepDive: 'Fleming identified the mold as Penicillium notatum and published his findings, but purifying and mass-producing the drug required the later work of Howard Florey, Ernst Chain, and Norman Heatley during World War II. Penicillin dramatically reduced deaths from infected wounds and bacterial diseases.',
+    funFact: 'Fleming kept the original contaminated plate and it is now preserved at the British Museum as a historic artifact.',
+    citation: 'Fleming (1929) British Journal of Experimental Pathology & Nobel Prize 1945',
+    audioNarrative: 'Did you know? Penicillin, the first true antibiotic, was discovered by accident when mold contaminated one of Alexander Fleming\'s bacterial culture plates in 1928.',
+    tags: ['Penicillin', 'Antibiotics', 'Accidental Discovery', 'Medicine']
+  },
+  {
+    id: 'inv-microwave-oven',
+    title: 'The Microwave Oven Was Invented After a Chocolate Bar Melted in a Pocket',
+    category: 'inventions_innovation',
+    digest: 'Engineer Percy Spencer noticed a chocolate bar in his pocket had melted while he worked on radar magnetron tubes; he realized microwaves could cook food.',
+    deepDive: 'Spencer experimented with popcorn and an egg, then developed the first commercial microwave oven (the Radarange) in 1947. Early models were the size of refrigerators and cost thousands of dollars. Countertop versions became common in homes only in the 1970s and 1980s.',
+    funFact: 'Microwave ovens heat food by agitating water molecules; they do not make food "radioactive" and the radiation stops the instant the door is opened or the timer ends.',
+    citation: 'Raytheon company history & Spencer patents',
+    audioNarrative: 'Did you know? The microwave oven was invented after an engineer noticed a chocolate bar melting in his pocket while he stood near a radar magnetron. He realized microwaves could cook food.',
+    tags: ['Microwave', 'Accidental Invention', 'Radar', 'Kitchen Tech']
+  },
+  {
+    id: 'inv-gps',
+    title: 'GPS Relies on Einstein\'s Relativity to Stay Accurate',
+    category: 'inventions_innovation',
+    digest: 'Global Positioning System satellites must correct for both special and general relativistic time dilation; without the corrections, position errors would grow by kilometers per day.',
+    deepDive: 'Clocks on the satellites run faster due to weaker gravity (general relativity) and slower due to their orbital speed (special relativity). The net effect is about 38 microseconds per day. GPS receivers also use signals from multiple satellites to triangulate position to within a few meters or better.',
+    funFact: 'The entire GPS constellation is operated by the United States Space Force, yet civilian use is free worldwide and underpins navigation, finance, and agriculture.',
+    citation: 'GPS.gov & relativity textbooks (Ashby, "Relativity in the Global Positioning System")',
+    audioNarrative: 'Did you know? GPS satellites must constantly correct their clocks for Einstein\'s relativity. Without those corrections your phone\'s map would be off by kilometers within a single day.',
+    tags: ['GPS', 'Relativity', 'Navigation', 'Satellites']
+  },
+  {
+    id: 'inv-graphene',
+    title: 'Graphene is a Single Layer of Carbon Atoms Stronger Than Steel',
+    category: 'inventions_innovation',
+    digest: 'Isolated in 2004 by peeling graphite with adhesive tape, graphene is a two-dimensional honeycomb lattice of carbon that is the strongest material ever measured.',
+    deepDive: 'Graphene conducts electricity better than copper, is nearly transparent, and has extraordinary thermal conductivity. Potential applications include ultra-fast electronics, flexible screens, advanced composites, and water filtration membranes. Andre Geim and Konstantin Novoselov received the 2010 Nobel Prize for their isolation method.',
+    funFact: 'A sheet of graphene one atom thick covering an entire football field would weigh less than a single gram.',
+    citation: 'Nobel Prize in Physics 2010 & Nature reviews on graphene',
+    audioNarrative: 'Did you know? Graphene is a single layer of carbon atoms arranged in a honeycomb. It is stronger than steel, conducts electricity better than copper, and was first isolated using ordinary adhesive tape.',
+    tags: ['Graphene', 'Materials Science', '2D Materials', 'Nobel Prize']
+  },
+
+  // ============================================================
+  // NEW FACTS — ENERGY & POWER
+  // ============================================================
+  {
+    id: 'energy-fusion-goal',
+    title: 'Nuclear Fusion Powers the Stars and May One Day Power Earth',
+    category: 'energy_power',
+    digest: 'Fusion joins light atomic nuclei (usually isotopes of hydrogen) into heavier ones, releasing enormous energy; it is the process that makes the Sun shine.',
+    deepDive: 'On Earth the leading approaches are magnetic confinement (tokamaks like ITER) and inertial confinement (lasers). The challenge is sustaining the extreme temperature and pressure long enough for net energy gain. In 2022 the National Ignition Facility achieved a brief scientific breakeven in a laser shot.',
+    funFact: 'One kilogram of fusion fuel (deuterium and tritium) can in principle release as much energy as millions of kilograms of fossil fuel, with no long-lived radioactive waste.',
+    citation: 'ITER Organization & Nature energy reviews',
+    audioNarrative: 'Did you know? Nuclear fusion is the process that powers the Sun. Scientists are working to recreate it on Earth as a clean, nearly limitless source of energy.',
+    tags: ['Fusion', 'ITER', 'Clean Energy', 'Plasma Physics']
+  },
+  {
+    id: 'energy-solar-efficiency',
+    title: 'Commercial Solar Panels Convert About 20% of Sunlight into Electricity',
+    category: 'energy_power',
+    digest: 'Modern silicon photovoltaic modules typically achieve 18–22% efficiency under standard test conditions; laboratory cells have exceeded 47% using multi-junction designs.',
+    deepDive: 'Photons with energy above the semiconductor bandgap free electrons that flow as current. Losses come from reflection, recombination, and the fact that only part of the solar spectrum is usable. Concentrator and tandem cells push efficiency higher at greater cost.',
+    funFact: 'The total solar energy hitting Earth in one hour exceeds humanity\'s entire annual energy consumption.',
+    citation: 'NREL Best Research-Cell Efficiency Chart & IRENA reports',
+    audioNarrative: 'Did you know? Typical rooftop solar panels turn about twenty percent of the sunlight that hits them into electricity. Laboratory cells have reached more than forty-seven percent efficiency.',
+    tags: ['Solar Power', 'Photovoltaics', 'Renewable Energy', 'Efficiency']
+  },
+  {
+    id: 'energy-lithium-ion',
+    title: 'Lithium-Ion Batteries Store Energy by Shuttling Lithium Ions',
+    category: 'energy_power',
+    digest: 'During charge and discharge, lithium ions move between a graphite anode and a metal-oxide cathode through a liquid electrolyte, while electrons travel through the external circuit.',
+    deepDive: 'Invented in commercial form by Sony in 1991 based on earlier work by Whittingham, Goodenough, and Yoshino (Nobel Prize 2019), Li-ion cells power phones, laptops, and electric vehicles. Energy density has roughly tripled since the 1990s, and solid-state and sodium-ion variants are under development.',
+    funFact: 'A typical electric-car battery pack contains enough lithium to manufacture several thousand smartphone batteries.',
+    citation: 'Nobel Prize in Chemistry 2019 & battery technology reviews',
+    audioNarrative: 'Did you know? Lithium-ion batteries work by moving lithium ions back and forth between two electrodes. This simple shuttle stores the energy that powers phones, laptops, and electric cars.',
+    tags: ['Batteries', 'Lithium-Ion', 'Energy Storage', 'EVs']
+  },
+  {
+    id: 'energy-grid-inertia',
+    title: 'Traditional Power Grids Rely on Rotating Mass for Stability',
+    category: 'energy_power',
+    digest: 'Large spinning turbines in coal, gas, and nuclear plants provide physical inertia that resists sudden frequency changes; inverter-based renewables lack this natural inertia.',
+    deepDive: 'When demand suddenly rises or a generator trips, the kinetic energy of rotating machines slows the rate of frequency drop, giving control systems time to respond. Grids with high shares of solar and wind must add synthetic inertia from batteries or advanced inverters, or keep some synchronous condensers online.',
+    funFact: 'A large steam turbine can weigh hundreds of tons and spin at 3,000 or 3,600 revolutions per minute, storing enormous rotational energy.',
+    citation: 'IEEE Power & Energy Society & grid-stability studies',
+    audioNarrative: 'Did you know? Traditional power plants help stabilize the electric grid with the spinning mass of their turbines. As more solar and wind connect, engineers must invent new ways to keep the frequency steady.',
+    tags: ['Power Grid', 'Inertia', 'Renewables', 'Stability']
+  },
+
+  // ============================================================
+  // NEW FACTS — OCEANS & DEEP SEA
+  // ============================================================
+  {
+    id: 'ocean-mariana-trench',
+    title: 'The Mariana Trench is Deeper Than Mount Everest is Tall',
+    category: 'ocean_deep',
+    digest: 'The Challenger Deep in the Mariana Trench reaches about 10,984 meters below sea level—deeper than the height of Everest above sea level.',
+    deepDive: 'Pressure at the bottom exceeds 1,000 atmospheres—enough to crush most submarines. Only a handful of crewed and robotic vehicles have reached the bottom. Despite the extreme conditions, specialized amphipods, snailfish, and microbial life thrive there.',
+    funFact: 'If Mount Everest were placed in the Challenger Deep, its summit would still be more than 2 kilometers underwater.',
+    citation: 'NOAA Ocean Exploration & bathymetric surveys',
+    audioNarrative: 'Did you know? The Mariana Trench is so deep that if you dropped Mount Everest into it, the mountain\'s peak would still be more than two kilometers below the ocean surface.',
+    tags: ['Mariana Trench', 'Deep Sea', 'Pressure', 'Exploration']
+  },
+  {
+    id: 'ocean-hydrothermal-vents',
+    title: 'Hydrothermal Vents Support Life Without Sunlight',
+    category: 'ocean_deep',
+    digest: 'At mid-ocean ridges, seawater heated by magma emerges at temperatures up to 400°C, carrying minerals that feed entire ecosystems based on chemosynthesis.',
+    deepDive: 'Bacteria and archaea oxidize hydrogen sulfide and other chemicals to produce organic matter, forming the base of a food web that includes giant tube worms, clams, and crabs. These communities were discovered only in 1977 and revolutionized ideas about where life can exist.',
+    funFact: 'Some vent microbes can survive temperatures above 100°C and are studied for industrial enzymes and insights into the origin of life.',
+    citation: 'Woods Hole Oceanographic Institution & Nature deep-sea biology',
+    audioNarrative: 'Did you know? Deep-sea hydrothermal vents support thriving ecosystems that never see sunlight. Microbes harness chemical energy from the Earth\'s interior instead of photosynthesis.',
+    tags: ['Hydrothermal Vents', 'Chemosynthesis', 'Extremophiles', 'Deep Sea']
+  },
+  {
+    id: 'ocean-currents',
+    title: 'The Global Ocean Conveyor Belt Circulates Water Over 1,000 Years',
+    category: 'ocean_deep',
+    digest: 'Thermohaline circulation moves heat, salt, and nutrients around the planet in a slow, planet-wide loop that can take a millennium to complete.',
+    deepDive: 'Cold, dense water sinks in the North Atlantic and around Antarctica, travels along the deep ocean floor, and eventually upwells in other regions. This circulation moderates climate and supplies oxygen to the deep sea. Melting ice and freshening surface water could weaken the Atlantic portion (AMOC).',
+    funFact: 'A water molecule that sinks in the Norwegian Sea may not return to the surface for a thousand years.',
+    citation: 'IPCC ocean chapters & physical oceanography textbooks',
+    audioNarrative: 'Did you know? The great ocean conveyor belt slowly circulates water around the entire planet. A single drop can take more than a thousand years to complete the journey.',
+    tags: ['Ocean Circulation', 'Thermohaline', 'Climate', 'Currents']
+  },
+  {
+    id: 'ocean-plastics',
+    title: 'Microplastics Have Reached the Deepest Ocean Trenches and Arctic Ice',
+    category: 'ocean_deep',
+    digest: 'Tiny plastic fragments now contaminate every marine environment sampled, from surface gyres to the hadal zone and polar ice cores.',
+    deepDive: 'Plastics break down into micro- and nano-particles that are ingested by plankton, fish, and filter feeders, entering food webs. They can carry adsorbed pollutants and physical harm. Global production of plastic continues to rise, and only a small percentage is effectively recycled.',
+    funFact: 'Researchers have found microplastics inside the bodies of animals living in the Mariana Trench—the deepest place on Earth.',
+    citation: 'Science & Nature papers on marine plastic pollution',
+    audioNarrative: 'Did you know? Microscopic pieces of plastic have been found in the deepest ocean trenches and in Arctic ice. Plastic pollution now reaches every corner of the marine world.',
+    tags: ['Microplastics', 'Pollution', 'Ocean Health', 'Environment']
+  },
+
+  // ============================================================
+  // NEW FACTS — MORE COSMOS & MATH
+  // ============================================================
+  {
+    id: 'galaxy-observable-universe',
+    title: 'The Observable Universe Contains Roughly Two Trillion Galaxies',
+    category: 'galaxy',
+    digest: 'Deep surveys with the Hubble and James Webb Space Telescopes imply that about two trillion galaxies exist within the sphere of the observable universe.',
+    deepDive: 'Each galaxy contains billions to trillions of stars. Light from the most distant galaxies has traveled more than 13 billion years to reach us. Because space itself expands, the actual distance to those galaxies today is far greater than 13 billion light-years.',
+    funFact: 'If you counted one galaxy per second, it would take more than 60,000 years to count them all.',
+    citation: 'Nature astronomy papers & NASA deep-field results',
+    audioNarrative: 'Did you know? The observable universe contains roughly two trillion galaxies. Counting one per second would take more than sixty thousand years.',
+    tags: ['Observable Universe', 'Galaxies', 'Cosmology', 'Deep Field']
+  },
+  {
+    id: 'galaxy-cosmic-microwave',
+    title: 'The Cosmic Microwave Background is the Afterglow of the Big Bang',
+    category: 'galaxy',
+    digest: 'A faint microwave glow fills the entire sky—the cooled remnant of the hot, dense state of the early universe about 380,000 years after the Big Bang.',
+    deepDive: 'Discovered accidentally in 1965 by Penzias and Wilson, the CMB has a nearly perfect blackbody spectrum at 2.725 K. Tiny temperature fluctuations of a few parts in 100,000 map the seeds of all later structure. Satellites such as COBE, WMAP, and Planck have mapped it in exquisite detail.',
+    funFact: 'About one percent of the static you used to see on an untuned analog television was cosmic microwave background radiation from the birth of the universe.',
+    citation: 'Nobel Prize 1978 (Penzias & Wilson) & Planck Collaboration papers',
+    audioNarrative: 'Did you know? The cosmic microwave background is the afterglow of the Big Bang. It fills the entire sky and is the oldest light we can observe, from when the universe was only three hundred and eighty thousand years old.',
+    tags: ['CMB', 'Big Bang', 'Cosmology', 'Microwave']
+  },
+  {
+    id: 'math-prime-numbers',
+    title: 'There Are Infinitely Many Prime Numbers—and No Largest One',
+    category: 'math',
+    digest: 'Euclid proved around 300 BCE that there is no largest prime: for any finite list of primes you can always construct a larger one.',
+    deepDive: 'His elegant proof assumes a finite set of primes, multiplies them together, adds one, and shows that the result is either prime or has a prime factor not in the original set. Primes remain central to modern cryptography (RSA, elliptic curves) because factoring large numbers is computationally hard.',
+    funFact: 'The largest known prime (as of recent records) has tens of millions of digits and was found by distributed computing projects searching for Mersenne primes.',
+    citation: 'Euclid\'s Elements Book IX & modern number-theory texts',
+    audioNarrative: 'Did you know? There are infinitely many prime numbers. Euclid proved more than two thousand years ago that no matter how many primes you list, there is always a bigger one.',
+    tags: ['Primes', 'Number Theory', 'Euclid', 'Cryptography']
+  },
+  {
+    id: 'math-pi-digits',
+    title: 'Pi Has Been Computed to More Than 100 Trillion Digits',
+    category: 'math',
+    digest: 'The ratio of a circle\'s circumference to its diameter is an irrational, transcendental number whose decimal expansion never repeats or terminates.',
+    deepDive: 'Modern records use the Chudnovsky algorithm and massive parallel computation. While only about 40 digits of pi are needed for most practical calculations (including interplanetary navigation), the pursuit of more digits tests algorithms, hardware, and error-checking methods.',
+    funFact: 'If you wrote one digit of pi on every atom in the observable universe, you would still run out of atoms long before finishing the known digits.',
+    citation: 'Pi computation records & mathematical constants literature',
+    audioNarrative: 'Did you know? The number pi has been calculated to more than one hundred trillion decimal places. Its digits never repeat and never end, and only a few dozen are needed for almost any real-world calculation.',
+    tags: ['Pi', 'Irrational Numbers', 'Computation', 'Constants']
+  },
+  {
+    id: 'science-gravitational-waves',
+    title: 'Gravitational Waves Are Ripples in Spacetime from Colliding Black Holes',
+    category: 'science',
+    digest: 'In 2015 LIGO detected the first gravitational waves from two black holes merging 1.3 billion light-years away, confirming a major prediction of Einstein\'s general relativity.',
+    deepDive: 'As massive objects accelerate, they create distortions in spacetime that travel at the speed of light. The waves stretch and squeeze space by tiny amounts—less than the width of a proton over a four-kilometer detector arm. Subsequent detections have included neutron-star mergers that also produced visible light and heavy elements.',
+    funFact: 'The energy radiated in gravitational waves during the final moments of a black-hole merger can briefly exceed the light output of all the stars in the observable universe.',
+    citation: 'LIGO/Virgo Collaboration & Nobel Prize in Physics 2017',
+    audioNarrative: 'Did you know? Gravitational waves are ripples in the fabric of spacetime caused by colliding black holes and neutron stars. They were first detected in 2015, a century after Einstein predicted them.',
+    tags: ['Gravitational Waves', 'LIGO', 'Black Holes', 'Relativity']
+  },
+  {
+    id: 'science-dark-matter',
+    title: 'Most of the Matter in the Universe is Invisible Dark Matter',
+    category: 'science',
+    digest: 'Galaxies rotate too fast to be held together by visible matter alone; an unseen component called dark matter provides the extra gravity.',
+    deepDive: 'Dark matter does not emit, absorb, or reflect light, yet its gravitational effects are observed in galaxy rotation curves, gravitational lensing, and the cosmic microwave background. Leading candidates include weakly interacting massive particles (WIMPs) and axions, but direct detection remains elusive.',
+    funFact: 'Dark matter outweighs ordinary atomic matter by roughly five to one; together they still make up only about 30% of the total energy content of the universe—the rest is dark energy.',
+    citation: 'Planck Collaboration cosmology results & particle-physics reviews',
+    audioNarrative: 'Did you know? Most of the matter in the universe is invisible dark matter. We cannot see it, but its gravity holds galaxies together and shapes the large-scale structure of the cosmos.',
+    tags: ['Dark Matter', 'Cosmology', 'Galaxies', 'Particle Physics']
+  },
+  {
+    id: 'math-eulers-identity',
+    title: 'Euler\'s Identity Links the Five Most Important Mathematical Constants',
+    category: 'math',
+    digest: 'The equation e^(iπ) + 1 = 0 elegantly combines e, i, π, 1, and 0—often called the most beautiful equation in mathematics.',
+    deepDive: 'It arises from Euler\'s formula e^(iθ) = cos θ + i sin θ evaluated at θ = π. The identity reveals deep connections between exponential functions, trigonometry, and complex numbers. It appears throughout physics, engineering, and pure mathematics.',
+    funFact: 'Richard Feynman called Euler\'s identity "the most remarkable formula in mathematics."',
+    citation: 'Euler\'s Introductio in analysin infinitorum & modern complex analysis',
+    audioNarrative: 'Did you know? Euler\'s identity, e to the i pi plus one equals zero, unites the five most fundamental constants in mathematics in a single breathtaking equation.',
+    tags: ['Euler', 'Complex Numbers', 'Mathematical Beauty', 'Constants']
+  },
+  {
+    id: 'tech-internet-scale',
+    title: 'The Internet Moves More Than 4 Zettabytes of Data Per Year',
+    category: 'tech_ai',
+    digest: 'Global internet traffic continues to grow exponentially, driven by video streaming, cloud computing, and connected devices.',
+    deepDive: 'A zettabyte is a billion terabytes. Content delivery networks, undersea fiber-optic cables, and hyperscale data centers form the physical backbone. Latency, routing efficiency, and energy consumption are major engineering challenges as traffic scales.',
+    funFact: 'A single undersea cable can carry more data than all the satellites in the sky combined, and the total length of submarine cables exceeds 1.4 million kilometers.',
+    citation: 'Cisco Visual Networking Index & TeleGeography submarine cable maps',
+    audioNarrative: 'Did you know? The global internet now carries more than four zettabytes of data every year—enough to fill billions of high-capacity hard drives.',
+    tags: ['Internet', 'Data Traffic', 'Infrastructure', 'Networking']
+  },
+
   ...EXPANDED_FACTS
 ];

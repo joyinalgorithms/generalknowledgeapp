@@ -3,6 +3,7 @@ import { Calendar, ChevronLeft, ChevronRight, Sparkles, Bookmark, BookmarkCheck,
 import { Fact } from '../types';
 import { getDailyFact } from '../utils/dailyFact';
 import { AudioPlayerButton } from './AudioPlayerButton';
+import { getFactNarration, getFactSimpleDefinition } from '../utils/audioSpeech';
 
 interface DailyFactBannerProps {
   onToggleBookmark: (id: string) => void;
@@ -103,8 +104,11 @@ export const DailyFactBanner: React.FC<DailyFactBannerProps> = ({
           </h2>
 
           <div className="p-4 rounded-xl bg-black/40 border border-emerald-500/30 backdrop-blur-sm mb-4">
+            <p className="text-xs uppercase tracking-wider text-emerald-300/80 mb-1 font-semibold">
+              Simple definition
+            </p>
             <p className="text-sm md:text-base text-emerald-100/90 leading-relaxed font-normal">
-              "{fact.digest}"
+              {getFactSimpleDefinition(fact)}
             </p>
           </div>
 
@@ -138,7 +142,7 @@ export const DailyFactBanner: React.FC<DailyFactBannerProps> = ({
           <div className="flex items-center gap-3">
             <AudioPlayerButton
               id={`daily-${fact.id}`}
-              textToSpeak={fact.audioNarrative || `${fact.title}. ${fact.digest} ${fact.deepDive}`}
+              textToSpeak={getFactNarration(fact)}
               title={fact.title}
               pronunciation={fact.pronunciation}
               activePlayingId={activePlayingId}

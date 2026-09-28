@@ -1,3 +1,23 @@
+import { Fact } from '../types';
+
+export function getFactSimpleDefinition(fact: Fact): string {
+  return fact.simpleDefinition || fact.digest;
+}
+
+export function getFactNarration(fact: Fact): string {
+  const sections = [
+    fact.title,
+    `Simple definition: ${getFactSimpleDefinition(fact)}`,
+    `More detail: ${fact.deepDive}`
+  ];
+
+  if (fact.funFact) {
+    sections.push(`Fun fact: ${fact.funFact}`);
+  }
+
+  return sections.join('. ');
+}
+
 /**
  * Web Speech API Audio Narration Engine
  * Provides crystal clear text-to-speech playback with pronunciation support,
